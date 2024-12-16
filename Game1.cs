@@ -36,6 +36,10 @@ public class Game1 : Game
 
     int countdown = 1;
     int countdown1 = 1;
+
+    int Hurmångaloopar = 5;
+
+    int ja = 3;
     
     
     int stop = 2;
@@ -91,13 +95,11 @@ public class Game1 : Game
         }
 
 
-
         if(countdown != 10 && stop == 1){
             countdown++;
         }
         if(countdown == 10 && stop == 1 || kstate.IsKeyDown(Keys.R) /*|| countdown == 10*/){
             
-            int Hurmångaloopar = 5;
 
             for(int i = 1; i < Hurmångaloopar; i++){
                 kordinatx = r.Next(1 - xbollgräns,xbollgräns+1);
@@ -105,16 +107,22 @@ public class Game1 : Game
                 bollhastighet.Add(new Point(bollxvo += r.Next(1,6),bollyvo += r.Next(1,6))); 
                 bollhastighet.Add(new Point(bollxvo += r.Next(1,6),bollyvo += r.Next(1,6)));
             }
-            
 
+            Hurmångaloopar += 2;
 
             bollxvo = 3;
             bollyvo = 3;
             countdown = 1;
         }
 
+        if(kstate.IsKeyDown(Keys.K)){
+            ja = 3;
+        }
+        if(kstate.IsKeyDown(Keys.L)){
+            ja = 1;
+        }
         //gör ytan störe
-        if (Keyboard.GetState().IsKeyDown(Keys.Up))
+        if (Keyboard.GetState().IsKeyDown(Keys.Up) || ja == 1)
         {
             //skärmen
             _graphics.PreferredBackBufferWidth+=2;
@@ -129,11 +137,15 @@ public class Game1 : Game
             golv[0] = new Rectangle(1,ybollgräns-20,xbollgräns,40);
             golv[1] = new Rectangle(1,ybollgräns-40,xbollgräns-xbollgräns/3,40);
 
+            countdown1++;
+            if(countdown1 == 500){
+                ja = 2;
+            }
             _graphics.ApplyChanges();
         }
 
         //gör den mindre
-        if (Keyboard.GetState().IsKeyDown(Keys.Down))
+        if (Keyboard.GetState().IsKeyDown(Keys.Down) || ja == 2)
         {
             //skärmen
             _graphics.PreferredBackBufferWidth-=2;
@@ -148,6 +160,10 @@ public class Game1 : Game
             golv[0] = new Rectangle(1,ybollgräns-20,xbollgräns,40);
             golv[1] = new Rectangle(1,ybollgräns-40,xbollgräns-xbollgräns/3,40);
 
+            countdown1--;
+            if(countdown1 == 1){
+                ja = 1;
+            }
             _graphics.ApplyChanges();
         }
 
@@ -173,7 +189,8 @@ public class Game1 : Game
                 
 
             }
-        
+
+            
         }
 
         // TODO: Add your update logic here

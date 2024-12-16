@@ -24,3 +24,4 @@ C:\Users\alle07002\OneDrive - Växjö kommun\Skrivbordet\program\Snooooooooooooo
 C:\Users\alle07002\OneDrive - Växjö kommun\Skrivbordet\program\Snooooooooooooooooooooooooooooooo\obj\Debug\net8.0-windows\Snooooooooooooooooooooooooooooooo.pdb
 C:\Users\alle07002\OneDrive - Växjö kommun\Skrivbordet\program\Snooooooooooooooooooooooooooooooo\obj\Debug\net8.0-windows\Snooooooooooooooooooooooooooooooo.genruntimeconfig.cache
 C:\Users\alle07002\OneDrive - Växjö kommun\Skrivbordet\program\Snooooooooooooooooooooooooooooooo\obj\Debug\net8.0-windows\ref\Snooooooooooooooooooooooooooooooo.dll
+C:\Users\alle07002\OneDrive - Växjö kommun\Skrivbordet\program\Snooooooooooooooooooooooooooooooo\obj\Debug\net8.0-windows\Snooooooooooooooooooooooooooooooo.sourcelink.json
